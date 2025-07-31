@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アニメ趣向性診断</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* アンケートページ専用スタイル */
+        .survey-container { max-width: 700px; margin: 20px auto; background: white; padding: 20px 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .question-group { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .question-group h2 { font-size: 1.1em; margin-bottom: 15px; color: #333;}
+        .question-group label { display: block; margin-bottom: 10px; cursor: pointer; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; transition: background-color 0.2s; }
+        .question-group label:hover { background-color: #f8f9fa; }
+        .question-group input[type="radio"] { margin-right: 8px; vertical-align: middle; }
+        .question-group span { vertical-align: middle; }
+
+        .submit-button { display: block; width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; text-align: center; text-decoration: none; margin-top: 20px; }
+        .submit-button:hover { background-color: #218838; }
+        .back-link { display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; }
+        .back-link:hover { background-color: #5a6268; }
+        .message { margin-top: 15px; text-align: center; font-weight: bold; min-height: 1.2em; /* メッセージ表示領域確保 */}
+        .success { color: green; }
+        .error { color: red; }
+
+        @media (max-width: 600px) {
+            .survey-container { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="survey-container">
+        <h1>アニメ趣向性診断</h1>
+        <p>いくつかの質問に答えて、あなたの好みに合ったアニメを見つけましょう！</p>
+
+        <form id="surveyForm">
+
+            <div class="question-group">
+                <h2>Q1: 見終わった後、どんな気持ちになりたい？</h2>
+                <label><input type="radio" name="q1_feeling" value="A" required><span> A. 心が温かくなる、感動したい</span></label>
+                <label><input type="radio" name="q1_feeling" value="B"><span> B. スカッとする、興奮したい</span></label>
+                <label><input type="radio" name="q1_feeling" value="C"><span> C. ゲラゲラ笑いたい、楽しい気分になりたい</span></label>
+                <label><input type="radio" name="q1_feeling" value="D"><span> D. 不思議な世界に浸りたい、考察したい</span></label>
+                <label><input type="radio" name="q1_feeling" value="E"><span> E. ハラハラドキドキしたい、緊張感がほしい</span></label>
+            </div>
+
+            <div class="question-group">
+                <h2>Q2: 物語で一番惹かれるのは？</h2>
+                <label><input type="radio" name="q2_focus" value="A" required><span> A. キャラクター達の関係性や成長</span></label>
+                <label><input type="radio" name="q2_focus" value="B"><span> B. 練り込まれたストーリー、伏線や謎解き</span></label>
+                <label><input type="radio" name="q2_focus" value="C"><span> C. 派手なアクションや戦闘シーン</span></label>
+                <label><input type="radio" name="q2_focus" value="D"><span> D. 独特な世界観や美しい風景</span></label>
+                <label><input type="radio" name="q2_focus" value="E"><span> E. 日常の何気ない面白さ、リアルな描写</span></label>
+            </div>
+
+            <div class="question-group">
+                <h2>Q3: 好みの展開は？</h2>
+                <label><input type="radio" name="q3_plot" value="A" required><span> A. 王道で分かりやすいストーリー</span></label>
+                <label><input type="radio" name="q3_plot" value="B"><span> B. 意外などんでん返しや予測不能な展開</span></label>
+                <label><input type="radio" name="q3_plot" value="C"><span> C. ゆっくりと進む、雰囲気重視の物語</span></label>
+                <label><input type="radio" name="q3_plot" value="D"><span> D. テンポが良く、次々事件が起こる展開</span></label>
+                <label><input type="radio" name="q3_plot" value="E"><span> E. 少し暗め、シリアスで考えさせられる展開</span></label>
+            </div>
+
+             <div class="question-group">
+                <h2>Q4: どんな舞台設定が好き？</h2>
+                <label><input type="radio" name="q4_setting" value="A" required><span> A. 現実（現代）に近い学校や街</span></label>
+                <label><input type="radio" name="q4_setting" value="B"><span> B. 剣と魔法のファンタジー世界</span></label>
+                <label><input type="radio" name="q4_setting" value="C"><span> C. 未来や宇宙などのSF的世界</span></label>
+                <label><input type="radio" name="q4_setting" value="D"><span> D. 日本や世界の歴史に基づいた時代</span></label>
+                 <label><input type="radio" name="q4_setting" value="E"><span> E. 特定のテーマ（スポーツ、音楽、仕事など）に特化した世界</span></label>
+             </div>
+
+             <div class="question-group">
+                <h2>Q5: デートするならどんな相手がいい？（比喩です）</h2>
+                <label><input type="radio" name="q5_partner" value="A" required><span> A. 明るく元気、一緒にいて楽しい人</span></label>
+                <label><input type="radio" name="q5_partner" value="B"><span> B. ミステリアスで知的な雰囲気の人</span></label>
+                <label><input type="radio" name="q5_partner" value="C"><span> C. 優しくて穏やか、癒し系の人</span></label>
+                <label><input type="radio" name="q5_partner" value="D"><span> D. 情熱的で、守ってくれそうな人</span></label>
+                <label><input type="radio" name="q5_partner" value="E"><span> E. ちょっと変わってる？個性的な魅力がある人</span></label>
+            </div>
+
+            <button type="submit" class="submit-button">診断結果を保存する</button>
+        </form>
+        <div id="messageArea" class="message"></div>
+        <a href="../index.html" class="back-link">おすすめページに戻る</a>
+    </div>
+    <!-- survey_script.js は body の最後で読み込む -->
+    <script src="survey_script.js"></script>
+</body>
+</html>

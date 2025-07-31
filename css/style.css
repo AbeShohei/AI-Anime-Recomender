@@ -1,0 +1,254 @@
+/* --- START OF FILE style.css --- */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* 全体の背景色を明るいグレーに */
+    color: #343a40; /* 基本テキスト色を濃いグレーに */
+    line-height: 1.6; /* 行の高さを読みやすく */
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* タイトル文字色を白に */
+    background-color: #007bff; /* タイトル背景色を青系に */
+    padding: 20px 0;
+    margin: 0 0 20px 0; /* 上下のマージン調整 */
+    font-size: 1.8em; /* タイトルのフォントサイズ */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* タイトルに軽い影 */
+}
+
+.nav-container {
+    text-align: center;
+    margin-bottom: 30px; /* 下に十分なマージン */
+}
+
+.survey-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #17a2b8; /* リンクの背景色を緑がかった青に */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* 角を丸く */
+    font-weight: bold;
+    transition: background-color 0.2s ease; /* ホバー時の色変化を滑らかに */
+}
+.survey-link:hover {
+    background-color: #117a8b; /* ホバー時の色を少し濃く */
+}
+
+/* フィルターコンテナのスタイル */
+.filter-container {
+    max-width: 900px; /* 最大幅を設定 */
+    margin: 0 auto 20px auto; /* 中央揃え、下にマージン */
+    padding: 15px 20px;
+    background-color: #e9ecef; /* フィルター部分の背景色 */
+    border-radius: 8px; /* 角を丸く */
+    text-align: center; /* 内部要素を中央揃え */
+    border: 1px solid #dee2e6; /* 境界線を薄く */
+}
+
+.filter-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em; /* 見出しサイズを少し小さく */
+    color: #495057; /* 見出しの色 */
+    display: inline-block; /* 他のラベルと横並びにするため */
+    margin-right: 15px;
+}
+
+.filter-container label {
+    margin: 0 10px 5px 10px; /* ラベル間のスペース、下に少しマージン */
+    cursor: pointer;
+    font-size: 0.95em;
+    display: inline-block; /* 横並びにする */
+    vertical-align: middle; /* チェックボックスとテキストの縦位置を合わせる */
+}
+
+.filter-container input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle; /* テキストと縦位置を合わせる */
+}
+
+#loadingMessage {
+    text-align: center;
+    color: #6c757d; /* ローディングメッセージの色 */
+    font-style: italic;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#recommendationsArea {
+    max-width: 1200px; /* カード表示に合わせて最大幅を広げる */
+    margin: 20px auto;
+    padding: 20px;
+    display: grid; /* ★ Grid Layout を使用 */
+    /* ★ 列の定義: 自動フィット、最小240px、最大1fr(均等分割) */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px; /* ★ カード間の隙間 */
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    min-height: 100px;
+}
+#recommendationsArea h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* おすすめエリアの見出し下に線 */
+    padding-bottom: 5px;
+    color: #333; /* 見出しの色 */
+    font-size: 1.3em; /* 見出しのフォントサイズ */
+}
+
+#recommendPlaceholder {
+    color: #6c757d; /* プレースホルダーテキストの色 */
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.1em; /* 少し大きめに */
+}
+#recommendPlaceholder a { /* プレースホルダー内のリンクスタイル */
+    color: #007bff;
+    text-decoration: underline;
+}
+#recommendPlaceholder a:hover {
+    color: #0056b3;
+}
+
+
+/* おすすめアイテム全体のスタイル */
+.recommend-item {
+    display: flex; /* Flexboxを使って画像とテキストを横並び */
+    align-items: flex-start; /* 画像とテキストの上端を揃える */
+    border-bottom: 1px solid #eee; /* アイテム間の区切り線 */
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+.recommend-item:last-child {
+    border-bottom: none; /* 最後のアイテムの下線は消す */
+    margin-bottom: 0;
+}
+
+/* おすすめアイテムの画像スタイル */
+.recommend-item img {
+    width: 80px; /* 画像の幅 */
+    height: 112px; /* アスペクト比を維持しつつ高さを指定 (例: 80 * 1.4) */
+    margin-right: 15px; /* 画像の右側にスペース */
+    border-radius: 4px; /* 画像の角を少し丸く */
+    object-fit: cover; /* 画像が指定サイズに合わせてトリミングされる */
+    background-color: #eee; /* 画像読み込み中の背景色 */
+    flex-shrink: 0; /* Flexコンテナ内で画像が縮まないようにする */
+}
+
+/* 画像がない場合の代替スタイル */
+.recommend-item .no-image {
+    width: 80px;
+    height: 112px;
+    margin-right: 15px;
+    border-radius: 4px;
+    background-color: #e9ecef; /* 背景色 */
+    color: #6c757d; /* テキスト色 */
+    display: flex;
+    align-items: center; /* 垂直中央揃え */
+    justify-content: center; /* 水平中央揃え */
+    font-size: 0.8em;
+    text-align: center;
+    flex-shrink: 0; /* 縮まないように */
+}
+
+/* おすすめアイテムのテキストコンテンツ部分 */
+.recommend-item-content {
+    flex-grow: 1; /* 残りのスペースをテキスト部分が使う */
+    min-width: 0; /* flexアイテムが内容に応じて縮小できるように */
+}
+
+.recommend-item h3 {
+    margin: 0 0 5px 0; /* タイトルの下のマージン */
+    color: #28a745; /* タイトルの色を緑系に */
+    font-size: 1.2em;
+    line-height: 1.3; /* タイトルが複数行になった場合の間隔 */
+}
+.recommend-item p {
+    margin: 4px 0; /* 段落間のマージン */
+    font-size: 0.95em; /* テキストのフォントサイズ */
+    color: #495057; /* テキストの色 */
+    word-wrap: break-word; /* 長いジャンル名などがはみ出ないように */
+}
+.recommend-item .tags { /* 将来的にタグ表示を使う場合のスタイル */
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-top: 5px;
+}
+.recommend-item .score { /* 将来的にスコア表示を使う場合のスタイル */
+    font-size: 0.9em;
+    color: #007bff;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* おすすめアイテム内の strong タグ（種類、ジャンルなど） */
+.recommend-item strong {
+    color: #555; /* 少し濃い灰色 */
+    font-weight: 600; /* 少し太字に */
+}
+
+/* レスポンシブ対応 (画面幅が768px以下の場合) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* スマホではタイトルを少し小さく */
+        padding: 15px 0;
+    }
+    .filter-container, #recommendationsArea {
+        margin-left: 15px; /* 左右のマージンを追加 */
+        margin-right: 15px;
+        padding: 15px; /* 内側のパディングも少し減らす */
+    }
+    .filter-container h3 {
+        display: block; /* フィルター見出しをブロック要素に */
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: left; /* 左揃えに */
+    }
+    .filter-container label {
+        display: block; /* フィルターのラベルを縦並びにする */
+        margin: 8px 0;
+        text-align: left; /* 左揃えに */
+    }
+    .filter-container br { /* HTMLに追加した改行はスマホでは不要かも */
+        display: none;
+    }
+
+    /* スマホ表示用に画像サイズ調整 */
+    .recommend-item img, .recommend-item .no-image {
+        width: 60px;
+        height: 84px; /* アスペクト比維持 (60 * 1.4) */
+        margin-right: 10px; /* 右マージンを少し減らす */
+    }
+    .recommend-item h3 {
+        font-size: 1.1em; /* スマホではタイトルを少し小さく */
+    }
+    .recommend-item p {
+        font-size: 0.9em; /* スマホではテキストを少し小さく */
+    }
+}
+
+/* --- END OF FILE style.css --- */
+
+#paginationArea { display: flex; justify-content: center; padding: 20px 0; margin-top: 20px; }
+.pagination { display: flex; padding-left: 0; list-style: none; border-radius: 0.25rem; }
+.page-item { margin: 0 2px; }
+.page-item .page-link { position: relative; display: block; padding: 0.5rem 0.75rem; margin-left: -1px; line-height: 1.25; color: #007bff; background-color: #fff; border: 1px solid #dee2e6; text-decoration: none; transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; border-radius: 0.25rem; cursor: pointer; }
+.page-item .page-link:hover { z-index: 2; color: #0056b3; background-color: #e9ecef; border-color: #dee2e6; }
+.page-item.active .page-link { z-index: 3; color: #fff; background-color: #007bff; border-color: #007bff; }
+.page-item.disabled .page-link { color: #6c757d; pointer-events: none; cursor: default; background-color: #fff; border-color: #dee2e6; }
+.page-item.disabled span.page-link { padding: 0.5rem 0.75rem; line-height: 1.25;}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff; /* おすすめエリアの見出し下に線 */
+    padding-bottom: 5px;
+    color: #333; /* 見出しの色 */
+    font-size: 1.3em; /* 見出しのフォントサイズ */
+    text-align: center; /* 中央ぞろえ */
+}

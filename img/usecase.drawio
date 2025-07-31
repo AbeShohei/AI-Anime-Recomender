@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram name="ページ1" id="uYZilBIJYXxWRIpANXVJ">
+        <mxGraphModel dx="1095" dy="514" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+                    <mxGeometry x="-2" y="20" width="626" height="371" as="geometry"/>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-6" value="利用者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="112" y="180" width="53" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-14" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;fontSize=12;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" target="BsGtJqpwq8Ds9ZiswLXq-15" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="165" y="192" as="sourcePoint"/>
+                        <mxPoint x="261" y="161" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-15" value="表示するアニメのフィルターを選択する" style="ellipse;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="268" y="105" width="224" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-16" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;fontSize=12;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" target="BsGtJqpwq8Ds9ZiswLXq-17" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="165" y="211" as="sourcePoint"/>
+                        <mxPoint x="267" y="224" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-17" value="アンケートに回答する" style="ellipse;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="268" y="172" width="224" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-18" value="アンケートの結果を保存する" style="ellipse;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="268" y="239" width="224" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-19" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;fontSize=12;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" target="BsGtJqpwq8Ds9ZiswLXq-18" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="165" y="237" as="sourcePoint"/>
+                        <mxPoint x="268" y="228" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-20" value="" style="endArrow=none;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=3;rounded=0;fontSize=12;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" source="BsGtJqpwq8Ds9ZiswLXq-6" target="BsGtJqpwq8Ds9ZiswLXq-21" edge="1">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="163" y="259" as="sourcePoint"/>
+                        <mxPoint x="263" y="326" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BsGtJqpwq8Ds9ZiswLXq-21" value="おすすめされたアニメを確認する" style="ellipse;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="268" y="306" width="224" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;h1&gt;ユースケース図&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;movable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+                    <mxGeometry x="209" y="6" width="184" height="73" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
