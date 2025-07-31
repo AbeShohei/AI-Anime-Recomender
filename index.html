@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あなたへのおすすめアニメ</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Papaparse.js CDN (CSVパースライブラリ) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <h1>あなたへのおすすめアニメ</h1>
+
+    <div class="nav-container">
+        <a href="src/survey.html" class="survey-link">▶ あなたの好みをアンケートで診断・変更する</a>
+    </div>
+
+    <!-- フィルター機能 -->
+    <div class="filter-container">
+        <h3>表示するアニメの種類:</h3>
+        <label><input type="checkbox" name="anime_type" value="TV" id="filterTV" checked> TVシリーズ</label>
+        <label><input type="checkbox" name="anime_type" value="Movie" id="filterMovie" checked> 映画</label>
+        <label><input type="checkbox" name="anime_type" value="Others" id="filterOthers" checked> その他 (OVA/ONA/SP等)</label>
+        <label><input type="checkbox" name="anime_ecchi" value="Ecchi" id="filterEcchi" checked> 過激な要素を表示</label>
+    </div>
+
+    <div id="loadingMessage" style="display: none;">アニメデータを読み込み中...</div>
+
+    <h2 class="recommend-heading">あなたへのおすすめアニメ</h2>
+
+    <!-- おすすめ表示エリア (Gridコンテナ) -->
+    <div id="recommendationsArea">
+        <!-- JSによってカードやメッセージがここに追加される -->
+    </div>
+
+    <!-- ★★★ ページネーション表示エリアを追加 ★★★ -->
+    <div id="paginationArea">
+        <!-- JSによってページネーションUIがここに追加される -->
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "anime-recommendation-app",
+  "version": "1.0.0",
+  "description": "Electron-based anime recommendation app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.flatagency.anime",
+    "productName": "AnimeRecommender",
+    "win": {
+      "target": ["nsis"],
+      "artifactName": "${productName}_Setup_${version}.${ext}"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/electron-builder"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "papaparse": "^5.3.0"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.8.0"
+  }
+}
